@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Erald Xhafa — IT Service Delivery Lead | Security &amp; Network Operations</title>
+  <meta name="description" content="Erald Xhafa portfolio: IT Service Delivery Lead with MSP operations experience, ServiceNow and ConnectWise incident/change coordination, networking and Linux background, NERC CIP training, SOC Analyst training, and completed HackTheBox SOC Analyst path." />
+  <meta name="keywords" content="IT Service Delivery Lead, MSP Operations, Service Desk Coordinator, Incident Coordinator, Change Coordinator, ConnectWise, ServiceNow, BrightGauge, Networking, Linux, Firewall Rules, SOC Analyst, Junior SOC Analyst, Security Operations Coordinator, Junior Security Analyst, SOC Coordinator, Incident Coordinator, Change Coordinator, OT Coordinator, OT Security, OT Security Coordinator, NERC CIP, Critical Infrastructure Security, ICS Security, SIEM, Splunk, QRadar, LogRhythm, Log Analysis, Incident Response, HackTheBox SOC Analyst Path, Netherlands Cybersecurity Jobs" />
+
+  <style>
+    :root {
+      --bg: #f4f2ec;
+      --surface: #fbfaf6;
+      --surface-strong: #ffffff;
+      --ink: #111111;
+      --muted: #67645e;
+      --line: #d9d3c7;
+      --line-strong: #b9b0a2;
+      --blue: #0647ff;
+      --blue-2: #3b78ff;
+      --amber: #dfa22a;
+      --red: #c93b2d;
+      --green: #087a52;
+      --shadow: 0 28px 80px rgba(25, 22, 16, .12);
+      --shadow-tight: 0 16px 40px rgba(25, 22, 16, .08);
+      --radius-xl: 36px;
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    :focus-visible { outline: 3px solid rgba(6,71,255,.45); outline-offset: 4px; }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 7% 6%, rgba(6, 71, 255, .10), transparent 28%),
+        radial-gradient(circle at 90% 3%, rgba(223, 162, 42, .18), transparent 24%),
+        linear-gradient(180deg, #faf8f2 0%, var(--bg) 42%, #ebe5d8 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .10;
+      background-image:
+        linear-gradient(rgba(17,17,17,.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(17,17,17,.09) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
+      z-index: 0;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      width: 520px;
+      height: 520px;
+      right: -190px;
+      top: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(6,71,255,.08), transparent 68%);
+      pointer-events: none;
+      z-index: 0;
+      
+    }
+
+    @keyframes orbFloat {
+      from { transform: translate3d(0, 0, 0) scale(1); }
+      to { transform: translate3d(-80px, 40px, 0) scale(1.12); }
+    }
+
+    @keyframes scan {
+      0% { transform: translateY(-120%); opacity: 0; }
+      20% { opacity: .65; }
+      100% { transform: translateY(420%); opacity: 0; }
+    }
+
+    @keyframes blink {
+      0%, 48% { opacity: 1; }
+      49%, 100% { opacity: .18; }
+    }
+
+    @keyframes floatSoft {
+      0%, 100% { transform: translate3d(0, 0, 0); }
+      50% { transform: translate3d(0, -10px, 0); }
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap {
+      width: min(1240px, calc(100% - 32px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 24px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      font-weight: 900;
+      letter-spacing: -.045em;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--ink);
+      color: white;
+      box-shadow: 6px 6px 0 var(--amber);
+      transform: rotate(-3deg);
+      flex: 0 0 auto;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-weight: 800;
+      letter-spacing: 0;
+      font-size: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 6px;
+      border: 1px solid rgba(185,176,162,.6);
+      background: rgba(255,255,255,.54);
+      border-radius: 999px;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 8px 24px rgba(25,22,16,.045);
+    }
+
+    .nav-links a {
+      padding: 10px 12px;
+      border-radius: 999px;
+      color: #44443f;
+      font-weight: 800;
+      font-size: 12.5px;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      background: white;
+      color: var(--ink);
+    }
+
+    .nav-contact {
+      border: 1px solid var(--ink);
+      background: var(--ink) !important;
+      color: white !important;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .availability span {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 6px rgba(8,122,82,.12);
+      
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(380px, .92fr);
+      align-items: stretch;
+      gap: 18px;
+      margin-top: 6px;
+    }
+
+    .hero-main {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.92), rgba(251,250,246,.74)),
+        var(--surface);
+      border: 1px solid rgba(185,176,162,.76);
+      box-shadow: var(--shadow);
+      padding: clamp(22px, 3.2vw, 42px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .hero-main::before {
+      content: "SECURITY OPERATIONS";
+      position: absolute;
+      left: -18px;
+      bottom: 18px;
+      font-size: clamp(50px, 7.6vw, 104px);
+      font-weight: 950;
+      letter-spacing: -.09em;
+      color: rgba(17,17,17,.035);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: max-content;
+      max-width: 100%;
+      padding: 10px 13px;
+      border: 1px solid rgba(185,176,162,.7);
+      background: rgba(255,255,255,.72);
+      border-radius: 999px;
+      color: #373832;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: -.01em;
+      box-shadow: 0 10px 24px rgba(25,22,16,.05);
+    }
+
+    .kicker::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 6px rgba(8,122,82,.12);
+    }
+
+    h1 {
+      margin: 20px 0 14px;
+      max-width: 780px;
+      font-size: clamp(42px, 5.6vw, 74px);
+      line-height: .9;
+      letter-spacing: -.08em;
+    }
+
+    .accent-line {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .accent-line::after {
+      content: "";
+      position: absolute;
+      left: .04em;
+      right: .02em;
+      bottom: .05em;
+      height: .12em;
+      background: var(--amber);
+      z-index: -1;
+      border-radius: 999px;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      margin: 0;
+      color: #373832;
+      font-size: clamp(15.5px, 1.35vw, 18px);
+      line-height: 1.45;
+    }
+
+    .hero-text strong { color: var(--ink); }
+
+    .note {
+      margin-top: 12px;
+      max-width: 720px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(6,71,255,.07);
+      border: 1px solid rgba(6,71,255,.18);
+      color: #333a52;
+      line-height: 1.42;
+      font-size: 13.5px;
+      font-weight: 700;
+    }
+
+    .hero-actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 19px;
+      border-radius: 16px;
+      border: 1.5px solid var(--ink);
+      font-weight: 900;
+      font-size: 14px;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .btn:hover { transform: translate(-2px, -2px); }
+    .btn:visited, .btn:hover, .btn:active { text-decoration: none; }
+
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .btn-ghost {
+      background: rgba(255,255,255,.7);
+      box-shadow: 4px 4px 0 rgba(17,17,17,.12);
+    }
+
+    .keyword-marquee {
+      position: relative;
+      z-index: 1;
+      display: none;
+      margin-top: 18px;
+      border: 1px solid rgba(185,176,162,.76);
+      background: rgba(255,255,255,.55);
+      border-radius: 999px;
+      overflow: hidden;
+
+    }
+
+    .keyword-track {
+      display: flex;
+      width: max-content;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .keyword-track span {
+      padding: 12px 18px;
+      color: #3e403a;
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .metric-strip {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid rgba(185,176,162,.76);
+      background: rgba(255,255,255,.68);
+      border-radius: 24px;
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+    }
+
+    .metric {
+      padding: 13px 15px;
+      border-right: 1px solid rgba(185,176,162,.76);
+    }
+
+    .metric:last-child { border-right: 0; }
+
+    .metric strong {
+      display: block;
+      font-size: 22px;
+      letter-spacing: -.06em;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      font-weight: 900;
+    }
+
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      min-height: 100%;
+      align-self: stretch;
+    }
+
+    .command-card,
+    .focus-card {
+      width: 100%;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(185,176,162,.76);
+      background: rgba(255,255,255,.72);
+      box-shadow: var(--shadow-tight);
+      overflow: hidden;
+    }
+
+    .command-card {
+      position: relative;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      min-height: 0;
+    }
+
+    .command-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    .lights { display: flex; gap: 7px; }
+
+    .lights span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--red);
+    }
+
+    .lights span:nth-child(2) { background: var(--amber); }
+    .lights span:nth-child(3) { background: var(--green); }
+
+    .terminal {
+      margin-top: 14px;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 82% 16%, rgba(6,71,255,.20), transparent 32%),
+        #111111;
+      color: #f2efe6;
+      padding: 18px;
+      min-height: 260px;
+      font-family: var(--mono);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .terminal::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 90px;
+      top: 0;
+      background: linear-gradient(to bottom, transparent, rgba(125,211,252,.12), transparent);
+
+    }
+
+    .terminal::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(transparent 50%, rgba(255,255,255,.035) 51%);
+      background-size: 100% 8px;
+      opacity: .38;
+    }
+
+    .terminal-line {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 11px;
+      color: rgba(255,255,255,.82);
+      font-size: 12px;
+      line-height: 1.38;
+    }
+
+    .prompt { color: #7dd3fc; }
+    .ok { color: #86efac; }
+    .warn { color: #fcd34d; }
+
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 15px;
+      background: #86efac;
+      vertical-align: -2px;
+      margin-left: 4px;
+      animation: blink 1s step-end infinite;
+    }
+
+    .signal-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .signal {
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      background:
+        linear-gradient(to top, rgba(125,211,252,.45) var(--h), rgba(255,255,255,.06) var(--h));
+
+    }
+
+    .focus-card {
+      padding: 20px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      flex: 0 0 auto;
+      min-height: 150px;
+    }
+
+    .focus-card::after {
+      content: "";
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 38px solid rgba(6,71,255,.08);
+      position: absolute;
+      right: -80px;
+      top: -70px;
+    }
+
+    .focus-card h2 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 8px;
+      font-size: 26px;
+      letter-spacing: -.06em;
+      line-height: .96;
+    }
+
+    .focus-card p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 14.5px;
+    }
+
+    .radar {
+      position: relative;
+      z-index: 1;
+      width: 110px;
+      height: 110px;
+      border-radius: 32px;
+      background: linear-gradient(135deg, #fff, #ece6da);
+      border: 1px solid var(--line);
+      box-shadow: 8px 8px 0 rgba(17,17,17,.1);
+      transform: rotate(3deg);
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .radar::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(6,71,255,.25);
+      box-shadow:
+        0 0 0 14px rgba(6,71,255,.06),
+        0 0 0 30px rgba(6,71,255,.04);
+    }
+
+    .radar::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 60px;
+      height: 2px;
+      background: var(--blue);
+      transform-origin: left center;
+
+    }
+
+    @keyframes radarSweep {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .radar-dot {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 0 6px rgba(201,59,45,.14);
+    }
+
+    .radar-dot.one { left: 40px; top: 70px; }
+    .radar-dot.two { right: 36px; top: 36px; background: var(--green); box-shadow: 0 0 0 6px rgba(8,122,82,.14); }
+
+    section { margin-top: 34px; scroll-margin-top: 24px; }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 330px 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .section-label {
+      position: sticky;
+      top: 18px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(185,176,162,.76);
+      background: rgba(255,255,255,.64);
+      box-shadow: var(--shadow-tight);
+      backdrop-filter: blur(18px);
+      padding: 24px;
+    }
+
+    .section-label code {
+      font-family: var(--mono);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .section-label h2 {
+      margin: 14px 0 0;
+      font-size: clamp(30px, 3.4vw, 50px);
+      line-height: .92;
+      letter-spacing: -.07em;
+    }
+
+    .section-label p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14.5px;
+    }
+
+    .cards { display: grid; gap: 16px; }
+
+    .card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(185,176,162,.76);
+      background: rgba(255,255,255,.72);
+      box-shadow: var(--shadow-tight);
+      padding: 26px;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 50px rgba(25,22,16,.11);
+      border-color: rgba(17,17,17,.34);
+    }
+
+    .card.feature {
+      background: var(--surface-strong);
+      border-color: var(--ink);
+      box-shadow: 9px 9px 0 rgba(17,17,17,.12);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 26px;
+      letter-spacing: -.05em;
+      line-height: 1.05;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.58;
+      font-size: 15px;
+    }
+
+    .two-col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      border-radius: 999px;
+      padding: 0 11px;
+      background: #f3efe6;
+      border: 1px solid #ded6c8;
+      color: #3f403a;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .truth-box {
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(223,162,42,.11);
+      border: 1px solid rgba(223,162,42,.28);
+    }
+
+    .truth-box strong {
+      display: block;
+      margin-bottom: 6px;
+      letter-spacing: -.035em;
+    }
+
+    .truth-box p { color: #51442d; font-size: 14.5px; }
+
+    .proof-row {
+      display: grid;
+      grid-template-columns: 44px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(244,242,236,.8);
+      border: 1px solid var(--line);
+      margin-top: 10px;
+    }
+
+    .proof-row:first-of-type { margin-top: 0; }
+
+    .proof-number {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--ink);
+      color: white;
+      font-weight: 950;
+      letter-spacing: -.05em;
+    }
+
+    .proof-row strong { display: block; letter-spacing: -.035em; margin-bottom: 3px; }
+    .proof-row span.proof-text { color: var(--muted); font-size: 14px; }
+
+    .proof-status {
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--green);
+      white-space: nowrap;
+    }
+
+    /* ---- timeline: earlier roles ---- */
+    .timeline { display: grid; gap: 12px; margin-top: 18px; }
+
+    .timeline-item {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(244,242,236,.8);
+      border: 1px solid var(--line);
+    }
+
+    .timeline-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .timeline-head strong { letter-spacing: -.03em; font-size: 16px; }
+    .timeline-head span { color: var(--muted); font-size: 12.5px; font-weight: 800; white-space: nowrap; }
+    .timeline-item p { margin: 8px 0 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .timeline-item .chips { margin-top: 10px; }
+
+    /* ---- certifications ---- */
+    .cert-row {
+      display: grid;
+      grid-template-columns: 44px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(244,242,236,.8);
+      border: 1px solid var(--line);
+      margin-top: 10px;
+    }
+
+    .cert-row:first-of-type { margin-top: 0; }
+
+    .cert-mark {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--ink);
+      color: white;
+      font-weight: 950;
+      font-size: 12px;
+      letter-spacing: -.02em;
+      text-align: center;
+    }
+
+    .cert-row strong { display: block; letter-spacing: -.03em; margin-bottom: 3px; }
+    .cert-row span.cert-issuer { color: var(--muted); font-size: 14px; }
+
+    .cert-date {
+      font-size: 11.5px;
+      font-weight: 950;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--green);
+      white-space: nowrap;
+    }
+
+    .cert-row.placeholder {
+      border-style: dashed;
+      border-color: var(--line-strong);
+      background: rgba(255,255,255,.4);
+    }
+
+    .cert-row.placeholder .cert-mark { background: rgba(17,17,17,.5); }
+    .cert-row.placeholder .cert-date { color: var(--muted); }
+
+    .subhead {
+      margin: 30px 0 0;
+      font-size: 19px;
+      letter-spacing: -.03em;
+    }
+
+    /* ---- lab log (click to expand) ---- */
+    .lab-log { display: grid; gap: 10px; margin-top: 16px; }
+
+    .lab-entry {
+      border-radius: 18px;
+      border: 1px dashed var(--line-strong);
+      background: rgba(255,255,255,.6);
+      overflow: hidden;
+    }
+
+    .lab-entry[open] {
+      border-style: solid;
+      border-color: var(--ink);
+    }
+
+    .lab-entry summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: background .15s ease;
+    }
+
+    .lab-entry summary:hover { background: rgba(6,71,255,.05); }
+    .lab-entry summary::-webkit-details-marker { display: none; }
+
+    .lab-entry-title { font-weight: 900; letter-spacing: -.02em; }
+
+    .lab-entry-right { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+
+    .lab-entry-meta {
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .lab-entry-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(6,71,255,.1);
+      color: var(--blue);
+      font-size: 11.5px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      white-space: nowrap;
+    }
+
+    .lab-entry .cta-open { display: none; }
+    .lab-entry[open] .cta-closed { display: none; }
+    .lab-entry[open] .cta-open { display: inline; }
+
+    .chevron {
+      font-family: var(--mono);
+      font-weight: 900;
+      transition: transform .2s ease;
+      display: inline-block;
+    }
+
+    .lab-entry[open] .chevron { transform: rotate(180deg); }
+
+    .lab-entry-body {
+      padding: 0 18px 16px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .lab-entry-body p { margin: 12px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+    .lab-entry-body .fkey { color: var(--blue); font-weight: 800; }
+
+    /* ---- education ---- */
+    .edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    .edu-card {
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(244,242,236,.82);
+      border: 1px solid var(--line);
+    }
+
+    .edu-card strong { display: block; font-size: 18px; letter-spacing: -.03em; margin-bottom: 4px; }
+    .edu-card .edu-school { display: block; color: var(--muted); font-weight: 800; font-size: 14px; margin-bottom: 8px; }
+    .edu-card p { margin: 0; color: var(--muted); font-size: 13px; }
+
+    .contact {
+      margin: 38px 0 48px;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at 82% 20%, rgba(6,71,255,.28), transparent 32%),
+        #111111;
+      color: white;
+      padding: clamp(30px, 5vw, 58px);
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .contact::after {
+      content: "CONTACT";
+      position: absolute;
+      right: -30px;
+      bottom: -20px;
+      font-size: clamp(64px, 12vw, 156px);
+      font-weight: 950;
+      letter-spacing: -.1em;
+      color: rgba(255,255,255,.045);
+      pointer-events: none;
+    }
+
+    .contact h2 {
+      margin: 0 0 16px;
+      max-width: 850px;
+      font-size: clamp(36px, 5.4vw, 70px);
+      line-height: .9;
+      letter-spacing: -.07em;
+    }
+
+    .contact p {
+      margin: 0;
+      max-width: 650px;
+      color: rgba(255,255,255,.72);
+      line-height: 1.58;
+      font-size: 15px;
+    }
+
+    .contact .location {
+      margin-top: 14px;
+      color: rgba(255,255,255,.52);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+
+    .contact-list {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 12px;
+      align-content: end;
+    }
+
+    .contact-list a {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.15);
+      font-weight: 900;
+      color: white;
+      font-size: 14px;
+    }
+
+    .contact-list a.primary {
+      background: white;
+      color: var(--ink);
+    }
+
+    .contact-list a.todo {
+      color: rgba(255,255,255,.55);
+      border-style: dashed;
+    }
+
+    footer {
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 38px;
+      font-size: 14px;
+    }
+
+    @media (min-width: 1041px) {
+      .hero {
+        max-height: calc(100vh - 104px);
+      }
+
+      .hero-main,
+      .hero-side {
+        min-height: 0;
+      }
+    }
+
+    @media (max-width: 1040px) {
+      .hero,
+      .section-grid,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { min-height: auto; }
+      .hero-side { grid-template-rows: auto; }
+      .section-label { position: static; }
+      .edu-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 22px, 1240px); }
+      .nav { align-items: flex-start; }
+      .availability, .nav-links { display: none; }
+
+      .hero-main,
+      .command-card,
+      .focus-card,
+      .contact {
+        border-radius: 26px;
+      }
+
+      h1 { font-size: 42px; }
+
+      .kicker {
+        width: auto;
+        align-items: flex-start;
+        border-radius: 18px;
+      }
+
+      .metric-strip,
+      .two-col,
+      .three-col,
+      .edu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metric {
+        border-right: 0;
+        border-bottom: 1px solid rgba(185,176,162,.76);
+      }
+
+      .metric:last-child { border-bottom: 0; }
+      .focus-card { grid-template-columns: 1fr; }
+      .radar { width: 100%; height: 140px; }
+
+      .proof-row, .cert-row { grid-template-columns: 44px 1fr; }
+      .proof-status, .cert-date { grid-column: 2; }
+      .timeline-head { flex-direction: column; align-items: flex-start; }
+
+      .lab-entry summary { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .lab-entry-right { width: 100%; flex-wrap: wrap; gap: 8px; justify-content: space-between; }
+      .lab-entry-meta { white-space: normal; }
+
+      footer { display: block; }
+      footer span { display: block; margin-bottom: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#">
+        <span class="brand-mark">EX</span>
+        <span>
+          Erald Xhafa
+          <small>IT Service Delivery Lead · Security Operations &amp; Critical Infrastructure</small>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certs</a>
+        <a href="#labs">Labs</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="nav-contact">Contact</a>
+      </div>
+
+      <div class="availability"><span></span> Security operations portfolio</div>
+    </nav>
+
+    <header class="hero">
+      <section class="hero-main">
+        <div>
+          <div class="kicker">IT Service Delivery Lead · NERC CIP trained · SOC Analyst training</div>
+
+          <h1>IT Service Delivery Lead with <span class="accent-line">security operations exposure.</span></h1>
+
+          <p class="hero-text">
+            I'm an <strong>IT Service Delivery Lead</strong> running MSP operations across 100+ client companies: 1,000+ tickets a week,
+            99.9% SLA compliance, engineer routing, escalation control, and ServiceNow incident/change coordination for a U.S. solar/wind generation client.
+            My security foundation combines <strong>NERC CIP training</strong>, <strong>SOC Analyst training from a local Albanian provider</strong>, and the completed
+            <strong>HackTheBox SOC Analyst Job Role Path</strong>.
+          </p>
+
+          <div class="note">
+            The value I bring is operational: I already work with priority, ownership, escalation, change windows, documentation, and SLA pressure — the same discipline security operations teams need when alerts become incidents.
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#labs">View security labs</a>
+            <a class="btn btn-ghost" href="#experience">View work proof</a>
+          </div>
+
+          <div class="keyword-marquee" aria-label="Role and skill keywords">
+            <div class="keyword-track">
+              <span>IT Service Delivery Lead</span>
+              <span>MSP Operations</span>
+              <span>Ticket Triage at Scale</span>
+              <span>ServiceNow</span>
+              <span>ConnectWise</span>
+              <span>BrightGauge</span>
+              <span>Incident Management</span>
+              <span>Change Management</span>
+              <span>Networking</span>
+              <span>Linux Administration</span>
+              <span>Firewall Rules</span>
+              <span>NERC CIP</span>
+              <span>OT Security</span>
+              <span>OT Coordinator</span>
+              <span>SOC Analyst</span>
+              <span>Junior Security Analyst</span>
+              <span>SOC Coordinator</span>
+              <span>SIEM</span>
+              <span>Splunk</span>
+              <span>QRadar</span>
+              <span>LogRhythm</span>
+              <span>Critical Infrastructure</span>
+              <span>HTB SOC Analyst Path</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="metric-strip" aria-label="Resume-backed metrics">
+          <div class="metric">
+            <strong>1,000+</strong>
+            <span>tickets / week</span>
+          </div>
+          <div class="metric">
+            <strong>99.9%</strong>
+            <span>SLA compliance</span>
+          </div>
+          <div class="metric">
+            <strong>5</strong>
+            <span>NERC CIP modules</span>
+          </div>
+          <div class="metric">
+            <strong>6+</strong>
+            <span>yrs IT &amp; network ops</span>
+          </div>
+        </div>
+      </section>
+
+      <aside class="hero-side">
+        <section class="command-card" aria-label="Terminal-style profile summary">
+          <div class="command-top">
+            <div class="lights" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div>career.log</div>
+          </div>
+
+          <div class="terminal">
+            <p class="terminal-line"><span class="prompt">erald@portfolio</span>:~$ whoami</p>
+            <p class="terminal-line"><span class="ok">IT Service Delivery Lead</span> — MSP, 100+ clients, 1,000+ tickets/wk, 99.9% SLA.</p>
+            <p class="terminal-line"><span class="prompt">erald@portfolio</span>:~$ ot_exposure</p>
+            <p class="terminal-line"><span class="warn">ServiceNow change &amp; incident lifecycle</span> for a solar/wind generation client — 15+ changes, 100-200+ incidents/wk.</p>
+            <p class="terminal-line"><span class="prompt">erald@portfolio</span>:~$ certifications</p>
+            <p class="terminal-line">SOC Analyst training, local Albanian provider (2022) · NERC CIP x5 — Program Basics, Cyber Assets, Access Mgmt, Physical Security, ESP.</p>
+            <p class="terminal-line"><span class="prompt">erald@portfolio</span>:~$ labs</p>
+            <p class="terminal-line">HackTheBox SOC Analyst Job Role Path — completed. Lab log below.<span class="cursor"></span></p>
+
+            <div class="signal-grid" aria-hidden="true">
+              <div class="signal" style="--h: 68%; --d: 0s"></div>
+              <div class="signal" style="--h: 42%; --d: .2s"></div>
+              <div class="signal" style="--h: 86%; --d: .4s"></div>
+              <div class="signal" style="--h: 55%; --d: .6s"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="focus-card">
+          <div>
+            <h2>By the numbers</h2>
+            <p>
+              5 NERC CIP modules. 100+ client companies coordinated weekly. HackTheBox SOC Analyst Path completed.
+            </p>
+          </div>
+
+          <div class="radar" aria-hidden="true">
+            <div class="radar-dot one"></div>
+            <div class="radar-dot two"></div>
+          </div>
+        </section>
+      </aside>
+    </header>
+
+    <section id="experience" class="section-grid">
+      <aside class="section-label">
+        <code>01 / EXPERIENCE</code>
+        <h2>Work history</h2>
+        <p>
+          MSP service delivery, network engineering, and IT support roles, 2020 to present.
+        </p>
+      </aside>
+
+      <div class="cards">
+        <article class="card feature">
+          <h3>Pro4ia Inc — IT Service Delivery Lead</h3>
+          <p style="margin-bottom: 4px;">04/2023 – Present · New York, United States (Remote)</p>
+
+          <div class="proof-row">
+            <div class="proof-number">01</div>
+            <div>
+              <strong>High-volume triage &amp; classification</strong>
+              <span class="proof-text">1,000+ tickets/week across 100+ client companies, classified and routed to 25-30 engineers by specialty, sub-1-minute response.</span>
+            </div>
+            <div class="proof-status">Current role</div>
+          </div>
+
+          <div class="proof-row">
+            <div class="proof-number">02</div>
+            <div>
+              <strong>SLA &amp; escalation discipline</strong>
+              <span class="proof-text">Continuous queue monitoring at 99.9% SLA adherence, proactive risk identification, and escalation alerts to prevent breaches.</span>
+            </div>
+            <div class="proof-status">Current role</div>
+          </div>
+
+          <div class="proof-row">
+            <div class="proof-number">03</div>
+            <div>
+              <strong>Incident &amp; change management for critical infrastructure</strong>
+              <span class="proof-text">Full lifecycle of &gt;15 change requests and 100-200+ incidents/week in ServiceNow for a U.S. solar/wind generation client — creation, approval, progression, verification, manual sync to ConnectWise.</span>
+            </div>
+            <div class="proof-status">Direct OT exposure</div>
+          </div>
+
+          <div class="proof-row">
+            <div class="proof-number">04</div>
+            <div>
+              <strong>Reporting &amp; operational intelligence</strong>
+              <span class="proof-text">ConnectWise custom views and BrightGauge dashboards for real-time SLA/KPI tracking, daily client status reports, and quarterly warranty reviews for 100+ devices.</span>
+            </div>
+            <div class="proof-status">Current role</div>
+          </div>
+
+          <div class="proof-row">
+            <div class="proof-number">05</div>
+            <div>
+              <strong>First-line technical triage</strong>
+              <span class="proof-text">Diagnosing hardware, network, connectivity, email, and software issues during initial client contact, with clear hand-off to engineers.</span>
+            </div>
+            <div class="proof-status">Current role</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Prior experience</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-head">
+                <strong>Network Engineer — Protech</strong>
+                <span>01/2022 – 04/2023 · Tirana, Albania</span>
+              </div>
+              <p>
+                Monitored routers, switches, servers, and telecom equipment. Managed Linux servers (CentOS, Debian, Ubuntu), configured and maintained
+                firewall rules, monitored LAN/WAN stability and traffic trends, and led resolution of complex network/server issues within SLA.
+              </p>
+              <div class="chips">
+                <span class="chip">Linux Administration</span>
+                <span class="chip">Firewall Rules</span>
+                <span class="chip">Network Monitoring</span>
+                <span class="chip">Diagnostics</span>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-head">
+                <strong>IT Specialist — Sela &amp; Drini SHPK</strong>
+                <span>01/2021 – 01/2022 · Tirana, Albania</span>
+              </div>
+              <p>
+                Maintained 50+ Windows endpoints, installed 20+ desktop computers during a company-wide upgrade, designed connectivity configurations
+                that increased network capacity 10%, and kept 250 employees operational on Windows 10.
+              </p>
+              <div class="chips">
+                <span class="chip">Endpoint Management</span>
+                <span class="chip">Windows</span>
+                <span class="chip">Vendor Coordination</span>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-head">
+                <strong>IT Support Specialist — Freelance</strong>
+                <span>01/2020 – 01/2021 · Tirana, Albania</span>
+              </div>
+              <p>Independently handled a high volume of desktop support issues and managed trouble tickets end-to-end.</p>
+              <div class="chips">
+                <span class="chip">Independent Troubleshooting</span>
+                <span class="chip">Ticketing</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section-grid">
+      <aside class="section-label">
+        <code>02 / SKILLS</code>
+        <h2>Technical foundation</h2>
+        <p>
+          Skills from MSP and network engineering work, grouped by function.
+        </p>
+      </aside>
+
+      <div class="cards">
+        <div class="three-col">
+          <article class="card">
+            <h3>Security Ops &amp; Monitoring</h3>
+            <div class="chips" style="margin-top:0;">
+              <span class="chip">SIEM fundamentals</span>
+              <span class="chip">Splunk</span>
+              <span class="chip">QRadar</span>
+              <span class="chip">LogRhythm</span>
+              <span class="chip">Alert/Ticket Triage at Scale</span>
+              <span class="chip">SLA &amp; Escalation Mgmt</span>
+              <span class="chip">Incident Mgmt</span>
+              <span class="chip">Change Mgmt</span>
+              <span class="chip">KPI Dashboards</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Networking</h3>
+            <div class="chips" style="margin-top:0;">
+              <span class="chip">ACL</span>
+              <span class="chip">DHCP</span>
+              <span class="chip">DNS</span>
+              <span class="chip">Frame-Relay</span>
+              <span class="chip">FTP</span>
+              <span class="chip">NAT</span>
+              <span class="chip">SMTP</span>
+              <span class="chip">SSH</span>
+              <span class="chip">STP</span>
+              <span class="chip">Telnet</span>
+              <span class="chip">VPN</span>
+              <span class="chip">Firewall Rules</span>
+              <span class="chip">LAN/WAN</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Systems Administration</h3>
+            <div class="chips" style="margin-top:0;">
+              <span class="chip">CentOS 7</span>
+              <span class="chip">Debian</span>
+              <span class="chip">Ubuntu</span>
+              <span class="chip">Red Hat 7 (CIS hardening)</span>
+              <span class="chip">Windows Server</span>
+              <span class="chip">Windows XP–10</span>
+              <span class="chip">macOS</span>
+              <span class="chip">Server Management</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>OT &amp; Critical Infrastructure</h3>
+            <div class="chips" style="margin-top:0;">
+              <span class="chip">NERC CIP trained</span>
+              <span class="chip">BES Cyber Asset basics</span>
+              <span class="chip">Access Management</span>
+              <span class="chip">Electronic Security Perimeters</span>
+              <span class="chip">Physical Security</span>
+              <span class="chip">Solar/Wind client exposure</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Tools &amp; Platforms</h3>
+            <div class="chips" style="margin-top:0;">
+              <span class="chip">ConnectWise</span>
+              <span class="chip">ServiceNow</span>
+              <span class="chip">BrightGauge</span>
+              <span class="chip">Microsoft Office Suite</span>
+              <span class="chip">Microsoft Access</span>
+              <span class="chip">Google Docs</span>
+              <span class="chip">Asterisk / VoIP</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Programming / Web</h3>
+            <div class="chips" style="margin-top:0;">
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section-grid">
+      <aside class="section-label">
+        <code>03 / CERTIFICATIONS</code>
+        <h2>Certifications</h2>
+        <p>
+          SOC Analyst training plus five NERC CIP modules covering OT/critical-infrastructure compliance.
+        </p>
+      </aside>
+
+      <div class="cards">
+        <article class="card feature">
+          <h3>Training and certifications</h3>
+
+          <div class="cert-row">
+            <div class="cert-mark">SOC</div>
+            <div>
+              <strong>SOC Analyst Training</strong>
+              <span class="cert-issuer">Local Albanian training provider</span>
+            </div>
+            <div class="cert-date">Completed 2022</div>
+          </div>
+
+          <div class="cert-row">
+            <div class="cert-mark">CIP</div>
+            <div>
+              <strong>NERC CIP — Program Basics</strong>
+              <span class="cert-issuer">NERC</span>
+            </div>
+            <div class="cert-date">Completed Mar 2026</div>
+          </div>
+
+          <div class="cert-row">
+            <div class="cert-mark">CIP</div>
+            <div>
+              <strong>NERC CIP — Managing Cyber Assets</strong>
+              <span class="cert-issuer">NERC</span>
+            </div>
+            <div class="cert-date">Completed Mar 2026</div>
+          </div>
+
+          <div class="cert-row">
+            <div class="cert-mark">CIP</div>
+            <div>
+              <strong>NERC CIP — Access Management</strong>
+              <span class="cert-issuer">NERC</span>
+            </div>
+            <div class="cert-date">Completed Mar 2026</div>
+          </div>
+
+          <div class="cert-row">
+            <div class="cert-mark">CIP</div>
+            <div>
+              <strong>NERC CIP — Physical Security</strong>
+              <span class="cert-issuer">NERC</span>
+            </div>
+            <div class="cert-date">Completed Mar 2026</div>
+          </div>
+
+          <div class="cert-row">
+            <div class="cert-mark">CIP</div>
+            <div>
+              <strong>NERC CIP — Electronic Security Perimeters</strong>
+              <span class="cert-issuer">NERC</span>
+            </div>
+            <div class="cert-date">Completed Mar 2026</div>
+          </div>
+
+          <div class="truth-box">
+            <strong>What NERC CIP covers</strong>
+            <p>
+              The compliance backbone of OT/ICS security: identifying Bulk Electric System (BES) cyber assets, controlling who can access them,
+              securing electronic and physical perimeters, and the program management around all of it.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="labs" class="section-grid">
+      <aside class="section-label">
+        <code>04 / LABS</code>
+        <h2>Hands-on labs</h2>
+        <p>
+          Completed SOC training path, with selected exercises and investigation areas.
+        </p>
+      </aside>
+
+      <div class="cards">
+        <article class="card feature">
+          <h3>HackTheBox SOC Analyst Job Role Path</h3>
+
+          <div class="cert-row">
+            <div class="cert-mark">HTB</div>
+            <div>
+              <strong>SOC Analyst Job Role Path</strong>
+              <span class="cert-issuer">HackTheBox Academy</span>
+            </div>
+            <div class="cert-date">Completed</div>
+          </div>
+
+          <p>
+            A 15-module program covering security monitoring, log analysis, threat hunting, network traffic analysis, malware analysis, and digital forensics.
+            In practice, that means triaging Windows and network logs for signs of compromise, building detections with YARA and Sigma rules, analyzing traffic
+            in Wireshark and Suricata, querying Splunk and Elastic during investigations, basic malware and JavaScript deobfuscation analysis, and writing
+            incident reports that hold up under review.
+          </p>
+
+          <div class="chips">
+            <span class="chip">Log Analysis</span>
+            <span class="chip">SIEM (Splunk / Elastic)</span>
+            <span class="chip">Threat Hunting</span>
+            <span class="chip">Network Traffic Analysis</span>
+            <span class="chip">Malware Analysis</span>
+            <span class="chip">Digital Forensics</span>
+            <span class="chip">Incident Reporting</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 class="subhead" style="margin-top: 0;">Selected lab focus areas</h3>
+
+          <div class="lab-log">
+            <details class="lab-entry">
+              <summary>
+                <span class="lab-entry-title">Sherlock — Meerkat</span>
+                <span class="lab-entry-right">
+                  <span class="lab-entry-meta">HTB Sherlock · General DFIR</span>
+                  <span class="lab-entry-cta"><span class="cta-closed">View details</span><span class="cta-open">Hide details</span><span class="chevron">▾</span></span>
+                </span>
+              </summary>
+              <div class="lab-entry-body">
+                <p><span class="fkey">Trains:</span> General DFIR investigation.</p>
+                <p><span class="fkey">Why:</span> The best beginner "real SOC case" style lab — a good first Sherlock.</p>
+                <p><span class="fkey">Portfolio note:</span> selected as a public write-up candidate.</p>
+              </div>
+            </details>
+
+            <details class="lab-entry">
+              <summary>
+                <span class="lab-entry-title">Sherlock — Bumblebee</span>
+                <span class="lab-entry-right">
+                  <span class="lab-entry-meta">HTB Sherlock · DB Forensics + Malware</span>
+                  <span class="lab-entry-cta"><span class="cta-closed">View details</span><span class="cta-open">Hide details</span><span class="chevron">▾</span></span>
+                </span>
+              </summary>
+              <div class="lab-entry-body">
+                <p><span class="fkey">Trains:</span> Database forensics and malware analysis.</p>
+                <p><span class="fkey">Why:</span> Good for understanding compromise, artifacts, and suspicious files.</p>
+                <p><span class="fkey">Portfolio note:</span> selected as a public write-up candidate.</p>
+              </div>
+            </details>
+
+            <details class="lab-entry">
+              <summary>
+                <span class="lab-entry-title">Sherlock — Litter</span>
+                <span class="lab-entry-right">
+                  <span class="lab-entry-meta">HTB Sherlock · Network Protocols</span>
+                  <span class="lab-entry-cta"><span class="cta-closed">View details</span><span class="cta-open">Hide details</span><span class="chevron">▾</span></span>
+                </span>
+              </summary>
+              <div class="lab-entry-body">
+                <p><span class="fkey">Trains:</span> Network protocols and tunneling.</p>
+                <p><span class="fkey">Why:</span> Good for network traffic analysis and spotting unusual protocol behavior.</p>
+                <p><span class="fkey">Portfolio note:</span> selected as a public write-up candidate.</p>
+              </div>
+            </details>
+
+            <details class="lab-entry">
+              <summary>
+                <span class="lab-entry-title">Sherlock — Logjammer</span>
+                <span class="lab-entry-right">
+                  <span class="lab-entry-meta">HTB Sherlock · Windows Event Logs</span>
+                  <span class="lab-entry-cta"><span class="cta-closed">View details</span><span class="cta-open">Hide details</span><span class="chevron">▾</span></span>
+                </span>
+              </summary>
+              <div class="lab-entry-body">
+                <p><span class="fkey">Trains:</span> Windows Event Log analysis.</p>
+                <p><span class="fkey">Why:</span> Highly relevant for SOC L1/L2 work, since Windows logs are everywhere.</p>
+                <p><span class="fkey">Portfolio note:</span> selected as a public write-up candidate.</p>
+              </div>
+            </details>
+
+            <details class="lab-entry">
+              <summary>
+                <span class="lab-entry-title">Sherlock — Tracer</span>
+                <span class="lab-entry-right">
+                  <span class="lab-entry-meta">HTB Sherlock · Advanced IR</span>
+                  <span class="lab-entry-cta"><span class="cta-closed">View details</span><span class="cta-open">Hide details</span><span class="chevron">▾</span></span>
+                </span>
+              </summary>
+              <div class="lab-entry-body">
+                <p><span class="fkey">Trains:</span> Advanced incident response.</p>
+                <p><span class="fkey">Why:</span> Best done after the others — focused on timeline-building and deeper IR thinking.</p>
+                <p><span class="fkey">Portfolio note:</span> selected as a public write-up candidate.</p>
+              </div>
+            </details>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="section-grid">
+      <aside class="section-label">
+        <code>05 / EDUCATION</code>
+        <h2>Academic base</h2>
+        <p>
+          Two degrees in information technology and business informatics, completed 2017–2022.
+        </p>
+      </aside>
+
+      <div class="cards">
+        <div class="edu-grid">
+          <article class="edu-card">
+            <strong>Master's Degree — Information Technology &amp; Innovation</strong>
+            <span class="edu-school">Laurasi University — Tirana, Albania</span>
+            <p>09/2020 – 2022</p>
+          </article>
+
+          <article class="edu-card">
+            <strong>Bachelor's Degree — Business Informatics (Banking &amp; Finance)</strong>
+            <span class="edu-school">European University of Tirana — Tirana, Albania</span>
+            <p>08/2017 – 10/2020</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <h2>Open to roles where this background applies.</h2>
+        <p>
+          IT Service Delivery Lead with MSP operations experience across 100+ clients, ServiceNow/ConnectWise workflow exposure, a hands-on
+          networking/Linux background, five NERC CIP modules, a SOC Analyst training, and the completed HackTheBox
+          SOC Analyst Job Role Path. Open to security operations, network security, OT/critical-infrastructure security, or related roles.
+        </p>
+        <div class="location">Tirana, Albania · Remote-ready · Currently remote for a U.S.-based MSP</div>
+      </div>
+
+      <div class="contact-list">
+        <a class="primary" href="mailto:eraldxhafa7@gmail.com">eraldxhafa7@gmail.com</a>
+        <a href="https://www.linkedin.com/in/eraldx/" target="_blank" rel="noopener">LinkedIn profile</a>
+        <a href="Erald-Xhafa-Resume.pdf">Download résumé (PDF)</a>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Erald Xhafa</span>
+      <span>Tirana, Albania</span>
+    </footer>
+  </main>
+</body>
+</html>
